@@ -32,11 +32,7 @@ function parseNumber(string) {
       result += num;
     }
   }
-  if (result !== 'undefined') {
-    return parseInt(result, 10);
-  } else {
-    return NaN;
-  }
+  return parseInt(result, 10);
 }
 
 parseNumber('2023 год');

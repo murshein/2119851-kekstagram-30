@@ -81,7 +81,6 @@ const createComments = function() {
   return comments;
 };
 
-
 const createPhoto = ids.map((id, i) => ({
   id: id,
   url: urls[i],
@@ -89,5 +88,6 @@ const createPhoto = ids.map((id, i) => ({
   likes: getRandomInteger(15, 200),
   comments: createComments()
 }));
-console.log(createPhoto);
+
+createPhoto();
 

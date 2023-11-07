@@ -81,13 +81,12 @@ const createComments = function() {
   return comments;
 };
 
-const createPhoto = ids.map((id, i) => ({
+const createPhoto = () => ids.map((id, i) => ({
   id: id,
   url: urls[i],
-  description: `${ getRandomArrayElement(DESCRIPTION_TEXT)}`,
+  description: `${getRandomArrayElement(DESCRIPTION_TEXT)}`,
   likes: getRandomInteger(15, 200),
   comments: createComments()
 }));
 
 createPhoto();
-

@@ -41,7 +41,7 @@ const DESCRIPTION_TEXT = [
 //Массив комментариев к фотографиям
 const MESSAGE_TEXT = [
   'В целом всё неплохо. Но не всё.',
-  'Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.',
+  'Я подскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.',
 ];
 
 const ids = rangedArray(1,25); //массив идентификаторов для фотографий
@@ -61,7 +61,7 @@ const createComments = function() {
   return comments;
 };
 
-const createPhoto = () => ids.map((id, i) => ({
+const createPhotos = () => ids.map((id, i) => ({
   id: id,
   url: urls[i],
   description: `${getRandomArrayElement(DESCRIPTION_TEXT)}`,
@@ -69,4 +69,4 @@ const createPhoto = () => ids.map((id, i) => ({
   comments: createComments()
 }));
 
-export {createPhoto};
+export {createPhotos};

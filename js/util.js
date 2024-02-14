@@ -7,6 +7,7 @@ const shuffle = (arr) => {
     const j = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]]; // свап arr[i] и arr[j]
   }
+  return arr;
 };
 
 //Генератор целых случайных чисел в диапазоне
@@ -17,7 +18,17 @@ const getRandomInteger = (a, b) => {
   return Math.floor(result);
 };
 
+const isEscapeKey = (evt) => evt.key === 'Escape';
+
 //Функция получения случайного элемента массива.
 const getRandomArrayElement = (elements) => elements[getRandomInteger(0, elements.length - 1)];
 
-export {getRandomArrayElement, rangedArray, getRandomInteger, shuffle};
+const debounce = (callback, timeoutDelay) => {
+  let timeoutId;
+  return (...rest) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => callback.apply(this, rest), timeoutDelay);
+  };
+};
+
+export {getRandomArrayElement, rangedArray, getRandomInteger, shuffle, isEscapeKey, debounce};

@@ -1,3 +1,6 @@
 import './functions.js';
-import {createPhoto} from './data.js';
-createPhoto();
+import './miniature.js';
+import './picture.js';
+import './user-form.js';
+import './connection.js';
+import './filters.js';
